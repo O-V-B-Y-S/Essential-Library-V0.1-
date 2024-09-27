@@ -4,12 +4,17 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Essential Library</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.css">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Staatliches&display=swap" rel="stylesheet">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css" />
         <link rel="stylesheet" href="./assets/css/style.css">
         <!-- <link rel="stylesheet" href="./assets/css/main.css"> -->
     </head>
     <body>
         <header>
-            <img class="logo" src="./assets/images/logo.png" alt="logo photo">
+            <!-- <img class="logo" src="./assets/images/logo.png" alt="logo photo"> -->
             <h2 class="title">Essential Library</h2>
             <nav class="navigation">
                 <a href="#">Home</a>
@@ -17,10 +22,10 @@
                 <a href="#">Books</a>
                 <a href="#">Contact</a>
                 <a href="#">Privacy Policy</a>
-                <button class="btn-login">Login</button>
+                <button class="btn-login" >Login</button>
             </nav>
         </header>
-        <section class="show-center">
+       
             <div class="wrapper" >
                 <span class="icon-close">
                     <ion-icon name="close"></ion-icon>        
@@ -30,14 +35,14 @@
                     <form action="#">
                         <div class="input-box">
                             <span class="icon"><ion-icon name="mail"></ion-icon></span>
-                            <input type="email" required>
+                            <input type="email" id="signupEmail" required>
                             <label >Email</label>
                         </div>
                         <div class="input-box">
                             <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
-                            <input type="password" required>
+                            <input type="password" id="signupPassword" required>
                             <label >Password</label>
-                            <button type="submit" class="btn" >Login</button>
+                            <button type="submit" class="btn" id="signinForm">Login</button>
                             <div class="login-register">
                                 <p>Don't have an account?<a href="" class="register-link" >Register</a></p>
                             </div>
@@ -51,17 +56,17 @@
                             <span class="icon">
                                 <ion-icon name="person"></ion-icon>                    
                             </span>
-                            <input type="text" required>
+                            <input type="text" id="signupUsername" required>
                             <label >Username</label>
                         </div>  
                         <div class="input-box">
                             <span class="icon"><ion-icon name="mail"></ion-icon></span>
-                            <input type="email" required>
+                            <input type="email" id="signupEmail" required>
                             <label >Email</label>
                         </div>
                         <div class="input-box">
                             <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
-                            <input type="password" required>
+                            <input type="password" id="signupPassword" required>
                             <label >Password</label>
                             <button type="submit" class="btn" id="signupForm">Register</button>
                             <div class="login-register">
@@ -71,9 +76,9 @@
                     </form>
                 </div>
             </div>
-        </section>
         
-        <main class="first-card">
+        
+        <!-- <main class="first-card">
             <section class="card-container">
                 <article class="card">
                     <div class="card-link">
@@ -180,8 +185,15 @@
                     </div>
                 </article>
             </section>
-        </main>
+        </main> -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/jquery-ui-touch-punch@0.2.3/jquery.ui.touch-punch.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
         <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        <script src="./assets/js/script.js"></script>
     </body>
 </html>

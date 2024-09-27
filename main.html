@@ -3,67 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./assets/css/main.css">
+    <title>main</title>
 </head>
 <body>
-    <button class="btnLogin-popup">Login</button>
-    
-    <div class="wrapper" >
-        <span class="icon-close">
-            <ion-icon name="close"></ion-icon>        
-        </span>
-        <div class="form-box login">
-            <h2>Login</h2>
-            <form action="#">
-                <div class="input-box">
-                    <span class="icon"><ion-icon name="mail"></ion-icon></span>
-                    <input type="email" required>
-                    <label >Email</label>
-                </div>
-                <div class="input-box">
-                    <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
-                    <input type="password" required>
-                    <label >Password</label>
-                    <button type="submit" class="btn">Login</button>
-                    <div class="login-register">
-                        <p>Don't have an account?<a href="" class="register-link" >Register</a></p>
-                    </div>
-                </div>
-            </form>
-        </div>
-        <div class="form-box register">
-            <h2>Registration</h2>
-            <form action="#">
-                <div class="input-box">
-                    <span class="icon">
-                        <ion-icon name="person"></ion-icon>                    
-                    </span>
-                    <input type="text" required>
-                    <label >Username</label>
-                </div>  
-                <div class="input-box">
-                    <span class="icon"><ion-icon name="mail"></ion-icon></span>
-                    <input type="email" required>
-                    <label >Email</label>
-                </div>
-                <div class="input-box">
-                    <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
-                    <input type="password" required>
-                    <label >Password</label>
-                    <button type="submit" class="btn">Register</button>
-                    <div class="login-register">
-                        <p>Already have an account?<a href="" class="login-link">login</a></p>
-                    </div>
-                </div>
-            </form>
-        </div>
+    <div class="container">
+        <h2>dgjihgslhgghndugh</h2>
+        <p>you have successfully signed in!</p>
+        <button id="logoutBtn">Logout</button>
     </div>
-    
 
-
-    <script src="./assets/js/main.js"></script>
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script>
+        document.getElementById('logoutBtn').addEventListener('click',()=>{
+            localStorage.clear();
+            window.location.href='index.html';
+        });
+    </script>
 </body>
 </html>
+<!-- Modal -->
+<div class="modal fade" id="task-form-modal" tabindex="-1" role="dialog" aria-labelledby="task-form-modal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="myModalTitle">Add New Task</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="modalTaskDescription">Task description</label>
+              <textarea class="form-control" id="modalTaskDescription" rows="3"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="modalDueDate">Due date</label>
+              <input type="text" class="form-control" placeholder="mm/dd/yyyy" id="modalDueDate" autocomplete="off">
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-close" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-save">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
