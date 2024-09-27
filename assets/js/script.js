@@ -27,24 +27,28 @@ closeBtn.addEventListener('click', function(event) {
 });
 
 
+var signUp = document.getElementById('signupForm');
 
-
-
-document.getElementById('signupForm').addEventListener('submit', function(event) {
-    event.preventDefault();
+signUp.addEventListener('submit', function(event) {
+    // event.preventDefault();
     const email = document.getElementById('signupEmail').value;
     const password = document.getElementById('signupPassword').value;
+    const userName = document.getElementById('signupUsername')
     // Store user data in local storage
-    localStorage.setItem(email, password);
+    localStorage.setItem("userpassword", password);
+    localStorage.setItem("useremail", email);
+    localStorage.setItem("userName", userName);
     // document.getElementById('message').textContent = 'Sign Up Successful!';
     document.getElementById('signupForm').reset();
 });
-document.getElementById('signinForm').addEventListener('submit', function(event) {
+
+var signIn = document.getElementById('signinForm');
+signIn.addEventListener('submit', function(event) {
     event.preventDefault();
     const email = document.getElementById('signinUsername').value;
     const password = document.getElementById('signinPassword').value;
     // Retrieve user data from local storage
-    const storedPassword = localStorage.getItem(email);
+    const storedPassword = localStorage.getItem(password);
     if (storedPassword && storedPassword === password) {
         document.getElementById('message').textContent = 'Sign In Successful!';
         window.location.href='./main.html'
