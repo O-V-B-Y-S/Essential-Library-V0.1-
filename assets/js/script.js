@@ -29,31 +29,45 @@ closeBtn.addEventListener('click', function(event) {
 
 var signUp = document.getElementById('signupForm');
 
-signUp.addEventListener('submit', function(event) {
-    // event.preventDefault();
-    const email = document.getElementById('signupEmail').value;
-    const password = document.getElementById('signupPassword').value;
-    const userName = document.getElementById('signupUsername')
+signUp.addEventListener('click', function(event) {
+    event.preventDefault();
+    let email = document.getElementById('signupEmail').value;
+    let password = document.getElementById('signupPassword').value;
+    let userName = document.getElementById('signupUsername').value;
     // Store user data in local storage
-    localStorage.setItem("userpassword", password);
-    localStorage.setItem("useremail", email);
-    localStorage.setItem("userName", userName);
+    localStorage.setItem("Userpassword", password);
+    localStorage.setItem("Useremail", email);
+    localStorage.setItem("UserName", userName);
+    email = document.getElementById('signupEmail').value=" ";
+    password = document.getElementById('signupPassword').value="";
+    userName = document.getElementById('signupUsername').value=" " ;
+    alert("You're Successfully siginup,Please login and watch the page")
     // document.getElementById('message').textContent = 'Sign Up Successful!';
-    document.getElementById('signupForm').reset();
+    wrapper.classList.remove('active'); 
+
 });
 
 var signIn = document.getElementById('signinForm');
-signIn.addEventListener('submit', function(event) {
+signIn.addEventListener('click', function(event) {
     event.preventDefault();
-    const email = document.getElementById('signinUsername').value;
-    const password = document.getElementById('signinPassword').value;
+    let email = document.getElementById('signinEmail').value;
+    let password = document.getElementById('signinPassword').value;
     // Retrieve user data from local storage
-    const storedPassword = localStorage.getItem(password);
-    if (storedPassword && storedPassword === password) {
-        document.getElementById('message').textContent = 'Sign In Successful!';
-        window.location.href='./main.html'
+    const storedPassword = localStorage.getItem("Userpassword");
+    const storedEmail = localStorage.getItem("Useremail");
+    if (
+        storedPassword &&
+        storedPassword === password &&
+        storedEmail &&
+        storedEmail === email
+         ) {
+            alert('Login Successfully!')
+            email = document.getElementById('signinEmail').value='';
+            password = document.getElementById('signinPassword').value='';
+            // document.getElementById('message').textContent = 'Sign In Successful!';
+            window.location.href='./main.html'
     } else {
-        document.getElementById('message').textContent = 'Invalid username or password!';
+        alert('Invalid username or password!');
     }
     document.getElementById('signinForm').reset();
 });
