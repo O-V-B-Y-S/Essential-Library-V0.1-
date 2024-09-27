@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Essential Library</title>
         <link rel="stylesheet" href="./assets/css/style.css">
+        <!-- <link rel="stylesheet" href="./assets/css/main.css"> -->
     </head>
     <body>
         <header>
@@ -19,7 +20,59 @@
                 <button class="btn-login">Login</button>
             </nav>
         </header>
-
+        <section class="show-center">
+            <div class="wrapper" >
+                <span class="icon-close">
+                    <ion-icon name="close"></ion-icon>        
+                </span>
+                <div class="form-box login">
+                    <h2>Login</h2>
+                    <form action="#">
+                        <div class="input-box">
+                            <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                            <input type="email" required>
+                            <label >Email</label>
+                        </div>
+                        <div class="input-box">
+                            <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                            <input type="password" required>
+                            <label >Password</label>
+                            <button type="submit" class="btn" >Login</button>
+                            <div class="login-register">
+                                <p>Don't have an account?<a href="" class="register-link" >Register</a></p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="form-box register">
+                    <h2>Registration</h2>
+                    <form action="#">
+                        <div class="input-box">
+                            <span class="icon">
+                                <ion-icon name="person"></ion-icon>                    
+                            </span>
+                            <input type="text" required>
+                            <label >Username</label>
+                        </div>  
+                        <div class="input-box">
+                            <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                            <input type="email" required>
+                            <label >Email</label>
+                        </div>
+                        <div class="input-box">
+                            <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                            <input type="password" required>
+                            <label >Password</label>
+                            <button type="submit" class="btn" id="signupForm">Register</button>
+                            <div class="login-register">
+                                <p>Already have an account?<a href="" class="login-link">login</a></p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        
         <main class="first-card">
             <section class="card-container">
                 <article class="card">
@@ -128,5 +181,7 @@
                 </article>
             </section>
         </main>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     </body>
 </html>
