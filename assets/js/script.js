@@ -4,11 +4,6 @@ const registerLink = document.querySelector('.register-link');
 const loginLink=document.querySelector('.login-link');
 const btnPopUp=document.querySelector('.btn-login');
 const closeBtn=document.querySelector('.icon-close')
-
-// registerLink.addEventListener('click', function(event) {
-//     event.preventDefault();  
-//     wrapper.classList.add('active'); 
-// });
 loginLink.addEventListener('click', function(event) {
     event.preventDefault();  
     wrapper.classList.remove('active'); 
@@ -71,3 +66,18 @@ signIn.addEventListener('click', function(event) {
     }
     document.getElementById('signinForm').reset();
 });
+function toggleMenu() {
+    const sideNav = document.getElementById('side-nav');
+    const mainContent = document.getElementById('main-content');
+
+    // Check if the sidebar is open
+    if (sideNav.classList.contains('side-nav-open')) {
+        // Hide the sidebar by removing the open class
+        sideNav.classList.remove('side-nav-open');
+        mainContent.classList.remove('main-content-open');
+    } else {
+        // Show the sidebar by adding the open class
+        sideNav.classList.add('side-nav-open');
+        mainContent.classList.add('main-content-open');
+    }
+}

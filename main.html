@@ -4,22 +4,186 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>main</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.css">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Staatliches&display=swap" rel="stylesheet">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css" />
+        <link rel="stylesheet" href="./assets/css/main.css">
+        <!-- <link rel="stylesheet" href="./assets/css/main.css"> -->
+        <!-- This is header side --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <style>
+          header{
+            position: sticky;
+            width: 100%;
+            
+          }
+        </style>
 </head>
 <body>
-    <div class="container">
-        <h2>dgjihgslhgghndugh</h2>
-        <p>you have successfully signed in!</p>
-        <button id="logoutBtn">Logout</button>
+  <!-- header -->
+  <header>
+    <div class="logo">
+        <img class="logo-radius" src="./assets/images/logo.png" alt="Library Logo">
+        <span>Essential Library</span>
+    </div>
+    <div class="search-bar">
+        <input type="text" id="search" placeholder="Search books, authors, ISBN...">
+        <button onclick="searchBooks()">
+            <i class="fas fa-search"></i>
+        </button>
     </div>
 
+    <button class="btn-login" id="logoutBtn">Logout</button>
+    <button class="toggle-btn" onclick="toggleMenu()">☰ MENU</button>
+  </header>
+<nav id="side-nav" class="side-nav">
+    <ul>
+        <li><a href="#"><i class="fas fa-home"></i>Home</a></li>
+        <li><a href="#"><i class="fas fa-book"></i>Books</a></li>
+        <li><a href="#"><i class="fas fa-plus-circle"></i>Add News</a></li>
+        <li><a href="#"><i class="fas fa-phone-alt"></i>Contact</a></li>
+        <li><a href="#"><i class="fas fa-info-circle"></i>About</a></li>
+        <li><a href="#"><i class="fas fa-shield-alt"></i>Privacy Policy</a></li>
+    </ul>
+    <button class="close-btn" onclick="toggleMenu()">Close</button>
+</nav>
+    <!-- <div class="container">
+        <h2>dgjihgslhgghndugh</h2>
+        <p>you have successfully signed in!</p>
+        <button >Logout</button>
+    </div> -->
+
+
+
+
+
+    <main class="first-card">
+            <section class="card-container">
+                <article class="card">
+                    <div class="card-link">
+                        <a href="#">
+                            <img src="./images/c1p.jpg" alt="so want drink esresso" class="card-img">
+                        </a>
+                        <div class="card-body">
+                            <span class="card-category">COFFE</span>
+                            <h2 class="card-title">Espresso</h2>
+                            <p class="card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat dolorem deleniti beatae tempora accusamus itaque quis magni! Quis aliquid, mollitia consequuntur quasi inventore itaque. Laborum saepe nobis repellat impedit fuga.</p>
+                            <div class="card-post-info">
+                                <img src="./assets/images/logo.png" alt="the girl who bakes the cake" class="card-avatar">
+                             </div>
+                            <div class="card-author">Vicakkhana</div>
+                            <time datetime="" class="card-date">july, 9 2024</time>
+                        </div>
+                    </div>
+                </article>
+        
+                <article class="card">
+                    <div class="card-link">
+                        <a href="#">
+                            <img src="./images/c2p.jpg" alt="two guns latte-coffe" class="card-img">
+                        </a>
+                        <div class="card-body">
+                            <span class="card-category">COFFE</span>
+                            <h2 class="card-title">Latte</h2>
+                            <p class="card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat dolorem deleniti beatae tempora accusamus itaque quis magni! Quis aliquid, mollitia consequuntur quasi inventore itaque. Laborum saepe nobis repellat impedit fuga.</p>
+                            <div class="card-post-info">
+                                <img src="./assets/images/logo.png" alt="the girl who bakes the cake" class="card-avatar">
+                             </div>
+                            <div class="card-author">Vicakkhana</div>
+                            <time datetime="" class="card-date">july, 9 2024</time>
+                        </div>
+                    </div>
+                </article>
+        
+                <article class="card">
+                    <div class="card-link">
+                        <a href="#">
+                            <img src="./images/c3p.jpg" alt="ice coffe drink and write code" class="card-img">
+                        </a>
+                        <div class="card-body">
+                            <span class="card-category">COFFE</span>
+                            <h2 class="card-title">Ice coffe</h2>
+                            <p class="card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat dolorem deleniti beatae tempora accusamus itaque quis magni! Quis aliquid, mollitia consequuntur quasi inventore itaque. Laborum saepe nobis repellat impedit fuga.</p>
+                            <div class="card-post-info">
+                                <img src="./assets/images/logo.png" alt="the girl who bakes the cake" class="card-avatar">
+                             </div>
+                            <div class="card-author">Vicakkhana</div>
+                            <time datetime="" class="card-date">july, 9 2024</time>
+                        </div>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-link">
+                        <a href="#">
+                            <img src="./images/c4p.jpg" alt="baking cake image" class="card-img">
+                        </a>
+                        <div class="card-body">
+                            <span class="card-category">HTML</span>
+                            <h2 class="card-title">lear2html5</h2>
+                            <p class="card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat dolorem deleniti beatae tempora accusamus itaque quis magni! Quis aliquid, mollitia consequuntur quasi inventore itaque. Laborum saepe nobis repellat impedit fuga.</p>
+                            <div class="card-post-info">
+                                <img src="./assets/images/logo.png" alt="the girl who bakes the cake" class="card-avatar">
+                             </div>
+                            <div class="card-author">Vicakkhana</div>
+                            <time datetime="" class="card-date">july, 9 2024</time>
+                        </div>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-link">
+                        <a href="#">
+                            <img src="./images/c5p.jpg" alt="baking cake image" class="card-img">
+                        </a>
+                        <div class="card-body">
+                            <span class="card-category">HTML</span>
+                            <h2 class="card-title">lear2html5</h2>
+                            <p class="card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat dolorem deleniti beatae tempora accusamus itaque quis magni! Quis aliquid, mollitia consequuntur quasi inventore itaque. Laborum saepe nobis repellat impedit fuga.</p>
+                            <div class="card-post-info">
+                                <img src="./assets/images/logo.png" alt="the girl who bakes the cake" class="card-avatar">
+                             </div>
+                            <div class="card-author">Vicakkhana</div>
+                            <time datetime="" class="card-date">july, 9 2024</time>
+                        </div>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-link">
+                        <a href="#">
+                            <img src="./images/c6p.jpg" alt="baking cake image" class="card-img">
+                        </a>
+                        <div class="card-body">
+                            <span class="card-category">HTML</span>
+                            <h2 class="card-title">lear2html5</h2>
+                            <p class="card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat dolorem deleniti beatae tempora accusamus itaque quis magni! Quis aliquid, mollitia consequuntur quasi inventore itaque. Laborum saepe nobis repellat impedit fuga.</p>
+                            <div class="card-post-info">
+                                <img src="./assets/images/logo.png" alt="the girl who bakes the cake" class="card-avatar">
+                             </div>
+                            <div class="card-author">Vicakkhana</div>
+                            <time datetime="" class="card-date">july, 9 2024</time>
+                        </div>
+                    </div>
+                </article>
+            </section>
+        </main>
     <script>
         document.getElementById('logoutBtn').addEventListener('click',()=>{
             localStorage.clear();
             window.location.href='index.html';
         });
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/jquery-ui-touch-punch@0.2.3/jquery.ui.touch-punch.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+      <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+      <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+      <script src="./assets/js/script.js"></script>
 </body>
 </html>
+
 <!-- Modal -->
 <div class="modal fade" id="task-form-modal" tabindex="-1" role="dialog" aria-labelledby="task-form-modal" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
